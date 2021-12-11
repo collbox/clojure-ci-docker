@@ -1,7 +1,9 @@
+image=collbox/clojure-ci
+
 build:
-	docker build --tag collbox/clojure-ci .
+	docker build --tag $(image) .
 
 push:
-	docker push collbox/clojure-ci
+	docker push $(image)
 
 .PHONY: build push
